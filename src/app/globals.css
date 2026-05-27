@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --indigo: #3C3489;
+  --indigo-light: #534AB7;
+  --indigo-pale: #7F77DD;
+  --dark-bg: #0D0C1D;
+  --light-bg: #F4F3FF;
+  --green: #1D9E75;
+  --coral: #D85A30;
+  --text-dark: #1A1832;
+  --text-muted: #6B6A8A;
+  --glow-indigo: 0 0 60px rgba(60, 52, 137, 0.4);
+  --glow-coral: 0 0 40px rgba(216, 90, 48, 0.3);
+  --gradient-hero: linear-gradient(135deg, #0D0C1D 0%, #1A1259 50%, #0D0C1D 100%);
+}
+
+@layer base {
+  body { @apply bg-[#F4F3FF] text-[#1A1832] antialiased; }
+  h1,h2,h3,h4 { @apply font-bold tracking-tight; }
+}
