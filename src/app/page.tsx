@@ -77,8 +77,8 @@ export default function Home() {
             <span className="text-xs font-bold text-[#e84b2a] tracking-[0.2em] uppercase">
               JOIN THE PLATFORM
             </span>
-            {/* Heading with Syne Display and highlighted keywords */}
-            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight font-syne">
+            {/* Heading with Clash Display and highlighted keywords */}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white leading-tight tracking-tight">
               Ready to <span className="text-[#e84b2a]">Stand Out</span> <br />
               in the Developer Market?
             </h2>

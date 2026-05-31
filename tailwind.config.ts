@@ -30,7 +30,8 @@ const config: Config = {
         coral: "#D85A30",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
+        sans: ["var(--font-satoshi)", "sans-serif"],
+        clash: ["var(--font-clash)", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

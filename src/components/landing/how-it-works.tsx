@@ -124,8 +124,8 @@ export function HowItWorks() {
           <span className="text-xs font-bold text-[#e84b2a] tracking-[0.2em] uppercase">
             HOW IT WORKS
           </span>
-          {/* Heading with Syne and keyword highlight */}
-          <h2 className="text-4xl md:text-5xl font-black text-[#0e0e18] tracking-tight leading-[1.15]">
+          {/* Heading with Clash and keyword highlight */}
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#0e0e18] tracking-tight leading-[1.15]">
             The Fastest Way To Achieve <span className="text-[#e84b2a]">Career Upskilling</span>
           </h2>
           <p className="text-sm font-light text-[#6b6b75] leading-relaxed">
@@ -149,7 +149,7 @@ export function HowItWorks() {
         <p className="text-xs uppercase tracking-widest text-[#6b6b75] mb-8 font-semibold">
           Empowering developers at top global engineering teams
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-30 grayscale font-syne select-none">
+        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-30 grayscale font-clash select-none">
           <span className="font-extrabold text-xl tracking-tight text-[#0e0e18]">GOOGLE</span>
           <span className="font-extrabold text-xl tracking-tight text-[#0e0e18]">META</span>
           <span className="font-extrabold text-xl tracking-tight text-[#0e0e18]">AMAZON</span>

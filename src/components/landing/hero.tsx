@@ -35,7 +35,7 @@ export function Hero() {
 
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden text-white w-full"
+      className="relative flex items-center justify-center pt-28 pb-16 overflow-hidden text-white w-full"
       style={{
         background: 'radial-gradient(ellipse 80% 60% at 20% 40%, rgba(232, 75, 42, 0.15) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 80% 20%, rgba(60, 52, 137, 0.2) 0%, transparent 50%), #0e0e18'
       }}
@@ -78,12 +78,12 @@ export function Hero() {
             AI-Powered Career Platform
           </div>
 
-          {/* Headline Word Stagger with Syne font and highlighted keywords */}
+          {/* Headline Word Stagger with Clash font and highlighted keywords */}
           <motion.h1
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.15] tracking-tight text-white max-w-2xl"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] tracking-tight text-white max-w-2xl"
           >
             {words.map((word, idx) => {
               const cleanWord = word.replace(/[^a-zA-Z-]/g, '').toLowerCase();

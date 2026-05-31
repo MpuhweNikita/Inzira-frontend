@@ -59,8 +59,8 @@ export function Testimonials() {
           <span className="text-xs font-bold text-[#e84b2a] tracking-[0.2em] uppercase">
             TESTIMONIALS
           </span>
-          {/* Heading with Syne and keyword highlight */}
-          <h2 className="text-4xl md:text-5xl font-black text-[#0e0e18] tracking-tight leading-tight">
+          {/* Heading with Clash and keyword highlight */}
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#0e0e18] tracking-tight leading-tight">
             What Say Our Developers, <br />
             About <span className="text-[#e84b2a]">Inzira Careers</span>
           </h2>
@@ -75,11 +75,11 @@ export function Testimonials() {
                 transition={{ duration: 0.3 }}
                 className="space-y-4"
               >
-                <p className="italic text-[#0e0e18] text-lg leading-relaxed max-w-xl">
+                <p className="italic text-[#0e0e18] text-base leading-relaxed max-w-xl">
                   &ldquo;{current.quote}&rdquo;
                 </p>
                 <div>
-                  <h4 className="font-extrabold text-[#0e0e18] text-base font-syne">{current.name}</h4>
+                  <h4 className="font-extrabold text-[#0e0e18] text-sm">{current.name}</h4>
                   <p className="text-xs text-[#6b6b75] font-light">{current.role}</p>
                 </div>
                 

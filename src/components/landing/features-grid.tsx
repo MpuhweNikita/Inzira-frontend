@@ -103,8 +103,8 @@ export function FeaturesGrid() {
             <span className="text-xs font-bold text-[#e84b2a] tracking-[0.2em] uppercase">
               OUR FEATURES
             </span>
-            {/* Heading with Syne Display and highlighted keywords */}
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white leading-tight">
+            {/* Heading with Clash Display and highlighted keywords */}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight">
               We Serve the Best Tools <br />
               View <span className="text-[#e84b2a]">AI Features</span>
             </h2>
@@ -154,7 +154,7 @@ export function FeaturesGrid() {
                     <span className="text-[#e84b2a] text-xs font-bold tracking-wider uppercase block">
                       {feat.category}
                     </span>
-                    <h3 className="font-extrabold text-lg text-white font-syne">{feat.title}</h3>
+                    <h3 className="font-extrabold text-base text-white">{feat.title}</h3>
                     <p className="text-xs text-white/50 leading-relaxed font-light">{feat.description}</p>
                   </div>
                 </div>
