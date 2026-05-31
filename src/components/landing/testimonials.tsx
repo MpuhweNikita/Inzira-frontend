@@ -38,7 +38,7 @@ export function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="bg-[#f5f5f5] py-24 pb-36 relative overflow-hidden text-[#0e0e18]">
+    <section id="testimonials" className="bg-[#f5f5f5] pt-6 pb-28 relative overflow-hidden text-[#0e0e18]">
       {/* Decorative Ornaments (Consistent across all sections) */}
       {/* 1. Dot Grid Pattern in corner */}
       <div className="absolute top-12 left-12 w-16 h-16 bg-[radial-gradient(#e84b2a_2px,transparent_2px)] [background-size:10px_10px] opacity-20 select-none pointer-events-none" />

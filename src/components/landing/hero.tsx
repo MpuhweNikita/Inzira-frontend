@@ -54,10 +54,10 @@ export function Hero() {
       <div className="absolute -left-32 top-1/4 w-80 h-80 rounded-full border-[6px] border-[#e84b2a]/10 select-none pointer-events-none" />
 
       {/* 4. ✕ marks stacked vertically on left side */}
-      <div className="absolute left-8 top-1/2 -translate-y-1/2 flex flex-col gap-3 opacity-25 text-[#e84b2a] text-sm font-bold font-mono select-none pointer-events-none">
-        <span>✕</span>
-        <span>✕</span>
-        <span>✕</span>
+      <div className="absolute left-8 top-1/2 -translate-y-1/2 flex flex-col gap-3 opacity-80 text-sm font-bold font-mono select-none pointer-events-none">
+        <span className="text-white">✕</span>
+        <span className="text-[#e84b2a]">✕</span>
+        <span className="text-white">✕</span>
       </div>
 
       {/* 5. Triangle arrow clusters (▲▲▲) on the right side */}

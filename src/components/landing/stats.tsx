@@ -63,13 +63,13 @@ export function Stats() {
   ];
 
   return (
-    <section className="bg-[#0e0e18] pt-8 pb-16 relative z-10 border-t border-white/5">
+    <section className="bg-[#0e0e18] pt-6 pb-20 relative z-10 border-t border-white/5">
       {/* Decorative Ornaments (Consistent across dark sections) */}
       {/* ✕ Marks Stack */}
-      <div className="absolute left-8 top-12 flex flex-col gap-2 opacity-25 text-[#e84b2a] text-sm font-bold font-mono select-none pointer-events-none">
-        <span>✕</span>
-        <span>✕</span>
-        <span>✕</span>
+      <div className="absolute left-8 top-12 flex flex-col gap-2 opacity-80 text-sm font-bold font-mono select-none pointer-events-none">
+        <span className="text-white">✕</span>
+        <span className="text-[#e84b2a]">✕</span>
+        <span className="text-white">✕</span>
       </div>
 
       {/* Triangles Cluster */}

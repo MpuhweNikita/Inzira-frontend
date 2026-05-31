@@ -55,7 +55,7 @@ export function HowItWorks() {
   };
 
   return (
-    <section id="how-it-works" className="py-16 pb-24 bg-[#f5f5f5] text-[#0e0e18] relative overflow-hidden">
+    <section id="how-it-works" className="pt-6 pb-24 bg-[#f5f5f5] text-[#0e0e18] relative overflow-hidden">
       {/* Decorative Ornaments (Consistent across all sections) */}
       {/* 1. Dot Grid Pattern in corner */}
       <div className="absolute top-12 left-12 w-16 h-16 bg-[radial-gradient(#e84b2a_2px,transparent_2px)] [background-size:10px_10px] opacity-20 select-none pointer-events-none" />

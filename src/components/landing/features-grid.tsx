@@ -67,13 +67,13 @@ export function FeaturesGrid() {
   };
 
   return (
-    <section id="features" className="py-16 pb-24 bg-[#0e0e18] text-white relative overflow-hidden">
+    <section id="features" className="pt-6 pb-24 bg-[#0e0e18] text-white relative overflow-hidden">
       {/* Decorative Ornaments (Consistent across all sections) */}
       {/* ✕ Marks Stack */}
-      <div className="absolute left-8 top-[15%] flex flex-col gap-2 opacity-25 text-[#e84b2a] text-sm font-bold font-mono select-none pointer-events-none">
-        <span>✕</span>
-        <span>✕</span>
-        <span>✕</span>
+      <div className="absolute left-8 top-[15%] flex flex-col gap-2 opacity-80 text-sm font-bold font-mono select-none pointer-events-none">
+        <span className="text-white">✕</span>
+        <span className="text-[#e84b2a]">✕</span>
+        <span className="text-white">✕</span>
       </div>
 
       {/* Triangles Cluster */}
@@ -86,8 +86,10 @@ export function FeaturesGrid() {
       {/* Dot Grid */}
       <div className="absolute bottom-20 left-12 w-14 h-14 bg-[radial-gradient(#e84b2a_2px,transparent_2px)] [background-size:10px_10px] opacity-20 select-none pointer-events-none" />
 
-      {/* Large hollow circle outline cropped */}
-      <div className="absolute -right-20 top-[40%] w-72 h-72 rounded-full border-4 border-[#e84b2a]/10 select-none pointer-events-none" />
+      {/* Circle Outline Ornament on the right */}
+      <div className="absolute -right-16 top-[45%] w-48 h-48 rounded-full border-[6px] border-white/20 select-none pointer-events-none z-0" />
+      {/* Dot Grid overlaying circle */}
+      <div className="absolute -right-8 top-[40%] w-16 h-16 bg-[radial-gradient(white_1.5px,transparent_1.5px)] [background-size:10px_10px] opacity-10 select-none pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         

@@ -48,10 +48,10 @@ export default function Home() {
         <div className="absolute -left-24 bottom-12 w-80 h-80 rounded-full border-4 border-[#e84b2a]/10 select-none pointer-events-none" />
 
         {/* 3. ✕ Marks Stack */}
-        <div className="absolute left-8 top-1/2 -translate-y-1/2 flex flex-col gap-3 opacity-25 text-[#e84b2a] text-sm font-bold font-mono select-none pointer-events-none">
-          <span>✕</span>
-          <span>✕</span>
-          <span>✕</span>
+        <div className="absolute left-8 top-1/2 -translate-y-1/2 flex flex-col gap-3 opacity-80 text-sm font-bold font-mono select-none pointer-events-none">
+          <span className="text-white">✕</span>
+          <span className="text-[#e84b2a]">✕</span>
+          <span className="text-white">✕</span>
         </div>
 
         {/* 4. Triangles Cluster */}
@@ -70,7 +70,7 @@ export default function Home() {
           style={{ borderRadius: '60% 40% 30% 70% / 60%' }}
         />
 
-        <div className="max-w-2xl mx-auto px-6 relative z-10 flex flex-col items-center text-center w-full">
+        <div className="max-w-2xl mx-auto px-12 relative z-10 flex flex-col items-center text-center w-full">
           {/* Left Side: Copywriting, stats progress bars and CTA */}
           <div className="space-y-6 flex flex-col items-center w-full">
             <span className="text-xs font-bold text-[#e84b2a] tracking-[0.2em] uppercase">
