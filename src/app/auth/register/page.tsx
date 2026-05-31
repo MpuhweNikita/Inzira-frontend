@@ -180,7 +180,7 @@ export default function RegisterPage() {
               className="w-full bg-[#3C3489] hover:bg-[#534AB7] text-white py-3 rounded-xl font-semibold shadow-md shadow-[#3C3489]/10 mt-2"
               isLoading={isLoading}
             >
-              {isLoading ? 'Creating account…' : 'Register'}
+              Register
             </Button>
           </form>
 

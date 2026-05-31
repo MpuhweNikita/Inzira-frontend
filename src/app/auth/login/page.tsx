@@ -140,7 +140,7 @@ export default function LoginPage() {
               className="w-full bg-[#3C3489] hover:bg-[#534AB7] text-white py-3 rounded-xl font-semibold shadow-md shadow-[#3C3489]/10"
               isLoading={isLoading}
             >
-              {isLoading ? 'Logging in…' : 'Log In'}
+              Log In
             </Button>
           </form>
 

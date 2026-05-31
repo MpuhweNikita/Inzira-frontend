@@ -1,17 +1,14 @@
-import axiosInstance from '../axios';
+import { api } from '../api';
 import { ApiResponse, CareerRoadmap } from '@/types';
 
 export async function getMyRoadmaps(): Promise<ApiResponse<CareerRoadmap[]>> {
-  const { data } = await axiosInstance.get<ApiResponse<CareerRoadmap[]>>('/roadmap/my-roadmaps');
-  return data;
+  return api.get<ApiResponse<CareerRoadmap[]>>('/roadmap/my-roadmaps');
 }
 
 export async function getRoadmap(id: string): Promise<ApiResponse<CareerRoadmap>> {
-  const { data } = await axiosInstance.get<ApiResponse<CareerRoadmap>>(`/roadmap/${id}`);
-  return data;
+  return api.get<ApiResponse<CareerRoadmap>>(`/roadmap/${id}`);
 }
 
 export async function toggleStep(roadmapId: string, stepIndex: number): Promise<ApiResponse<CareerRoadmap>> {
-  const { data } = await axiosInstance.patch<ApiResponse<CareerRoadmap>>(`/roadmap/${roadmapId}/step/${stepIndex}`);
-  return data;
+  return api.patch<ApiResponse<CareerRoadmap>>(`/roadmap/${roadmapId}/step/${stepIndex}`);
 }
