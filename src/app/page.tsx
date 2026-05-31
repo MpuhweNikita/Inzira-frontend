@@ -71,9 +71,9 @@ export default function Home() {
           style={{ borderRadius: '60% 40% 30% 70% / 60%' }}
         />
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center w-full">
+        <div className="max-w-2xl mx-auto px-6 relative z-10 flex flex-col items-center text-center w-full">
           {/* Left Side: Copywriting, stats progress bars and CTA */}
-          <div className="lg:col-span-7 space-y-6 flex flex-col items-center lg:items-start text-center lg:text-left">
+          <div className="space-y-6 flex flex-col items-center w-full">
             <span className="text-xs font-bold text-[#e84b2a] tracking-[0.2em] uppercase">
               JOIN THE PLATFORM
             </span>
@@ -138,32 +138,6 @@ export default function Home() {
                   </span>
                 </motion.span>
               </Link>
-            </div>
-          </div>
-
-          {/* Right Side: Team Illustration with Blobs */}
-          <div className="lg:col-span-5 flex justify-center items-center relative h-[360px] lg:h-[400px]">
-            <div className="relative">
-              {/* White Outline circle */}
-              <div className="absolute -right-6 -bottom-6 w-56 h-56 rounded-full border border-white/5 z-0" />
-              
-              {/* Orange Gradient blob ornament */}
-              <div 
-                className="absolute -left-10 top-12 w-20 h-20 bg-gradient-to-br from-[#e84b2a] to-[#ff6b4a] opacity-80 blur-[1px] shadow-lg z-10"
-                style={{ borderRadius: '50% 50% 30% 70% / 50%' }}
-              />
-
-              {/* Dotted Grid Pattern overlay */}
-              <div className="absolute -right-8 -top-8 w-24 h-24 bg-[radial-gradient(circle,_#e84b2a_1.5px,_transparent_1.5px)] [background-size:12px_12px] opacity-25 z-0" />
-
-              {/* Team Meeting Container */}
-              <div className="w-[280px] h-[340px] rounded-[32px] border-4 border-white/10 overflow-hidden shadow-2xl relative z-20">
-                <img 
-                  src="/team_meeting.png" 
-                  alt="Team meeting illustration" 
-                  className="w-full h-full object-cover select-none pointer-events-none"
-                />
-              </div>
             </div>
           </div>
         </div>

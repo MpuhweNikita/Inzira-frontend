@@ -11,42 +11,36 @@ const features = [
     category: 'Analysis',
     title: 'Resume ATS Analyzer',
     description: 'Instantly score your resume against parsing algorithms. Check formatting issues and matches.',
-    image: '/team_working.png',
   },
   {
     icon: Target,
     category: 'Optimization',
     title: 'Skill Gap Detector',
     description: 'Compare your resume against any target role to identify missing libraries, languages, and methodologies.',
-    image: '/career_growth.png',
   },
   {
     icon: Map,
     category: 'Planning',
     title: 'Career Roadmap Generator',
     description: 'Get custom transition roadmaps with estimated step times, course links, and certificates.',
-    image: '/team_meeting.png',
   },
   {
     icon: Mic,
     category: 'Simulation',
     title: 'Mock Interview Engine',
     description: 'Interactive audio/text practice sessions tailored to your focus topics with constructive grading.',
-    image: '/team_working.png',
   },
   {
     icon: TrendingUp,
     category: 'Tracking',
     title: 'Progress Tracker',
     description: 'Track roadmap completion and monitor your match score growth on interactive dashboards.',
-    image: '/career_growth.png',
   },
   {
     icon: Sparkles,
     category: 'AI Guidance',
     title: 'AI Recommendations',
     description: 'Obtain granular upskilling recommendations (projects, repositories, guides) dynamically.',
-    image: '/team_meeting.png',
   },
 ];
 
@@ -130,6 +124,7 @@ export function FeaturesGrid() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {features.map((feat, idx) => {
+            const Icon = feat.icon;
             return (
               <motion.div
                 key={idx}
@@ -139,18 +134,12 @@ export function FeaturesGrid() {
                 className="group relative bg-[#13103a]/40 rounded-2xl border border-white/10 hover:border-[#e84b2a]/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(232,75,42,0.15)] flex flex-col justify-between overflow-hidden cursor-pointer h-full"
               >
                 <div>
-                  {/* Card Image Top */}
-                  <div className="h-44 overflow-hidden relative">
-                    <img 
-                      src={feat.image} 
-                      alt={feat.title} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-[#0e0e18]/20 group-hover:bg-[#0e0e18]/0 transition-colors" />
-                  </div>
-                  
                   {/* Card Content */}
-                  <div className="p-6 space-y-2">
+                  <div className="p-6 space-y-3">
+                    {/* Icon Container */}
+                    <div className="w-10 h-10 rounded-xl bg-[#e84b2a]/10 flex items-center justify-center text-[#e84b2a] mb-2">
+                      <Icon className="w-5 h-5" />
+                    </div>
                     <span className="text-[#e84b2a] text-xs font-bold tracking-wider uppercase block">
                       {feat.category}
                     </span>

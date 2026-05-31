@@ -70,130 +70,90 @@ export function Hero() {
       {/* 6. Thin horizontal orange line accent near bottom-right */}
       <div className="absolute right-12 bottom-12 w-28 h-0.5 bg-[#e84b2a] opacity-35 select-none pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10 w-full">
-        {/* Left column (60%) */}
-        <div className="lg:col-span-7 space-y-6 flex flex-col items-center lg:items-start text-center lg:text-left">
-          {/* Indigo border badge */}
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#e84b2a]/30 bg-[#e84b2a]/5 text-xs font-bold tracking-wider text-[#e84b2a] uppercase">
-            AI-Powered Career Platform
-          </div>
+      <div className="max-w-4xl mx-auto px-6 flex flex-col items-center text-center relative z-10 w-full">
+        {/* Indigo border badge */}
+        <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#e84b2a]/30 bg-[#e84b2a]/5 text-xs font-bold tracking-wider text-[#e84b2a] uppercase mb-4">
+          AI-Powered Career Platform
+        </div>
 
-          {/* Headline Word Stagger with Clash font and highlighted keywords */}
-          <motion.h1
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] tracking-tight text-white max-w-2xl"
-          >
-            {words.map((word, idx) => {
-              const cleanWord = word.replace(/[^a-zA-Z-]/g, '').toLowerCase();
-              const isKeyword = cleanWord.includes('ai-powered') || cleanWord.includes('guidance');
-              return (
-                <motion.span
-                  key={idx}
-                  variants={wordVariants}
-                  className={`inline-block mr-3 ${isKeyword ? 'text-[#e84b2a]' : 'text-white'}`}
-                >
-                  {word}
-                </motion.span>
-              );
-            })}
-          </motion.h1>
-
-          <p className="text-sm font-light text-white/50 leading-relaxed max-w-lg">
-            Upload your resume, discover skill gaps, get a personalized roadmap, and ace your next interview — all powered by AI.
-          </p>
-
-          {/* CTA Button Row using pill-shaped orange buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 items-center pt-2">
-            <Link href="/auth/register">
+        {/* Headline Word Stagger with Clash font and highlighted keywords */}
+        <motion.h1
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] tracking-tight text-white max-w-2xl"
+        >
+          {words.map((word, idx) => {
+            const cleanWord = word.replace(/[^a-zA-Z-]/g, '').toLowerCase();
+            const isKeyword = cleanWord.includes('ai-powered') || cleanWord.includes('guidance');
+            return (
               <motion.span
-                animate={{ scale: [1, 1.02, 1] }}
-                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                whileHover={{ scale: 1.03, boxShadow: '0 12px 40px rgba(232,75,42,0.5)' }}
-                whileTap={{ scale: 0.97 }}
-                style={{ boxShadow: '0 8px 32px rgba(232,75,42,0.3)' }}
-                className="inline-flex items-center gap-4 bg-[#e84b2a] hover:bg-[#e84b2a]/95 text-white pl-8 pr-2.5 py-3.5 rounded-full font-bold text-base transition-all duration-200 cursor-pointer shadow-lg shadow-[#e84b2a]/20"
+                key={idx}
+                variants={wordVariants}
+                className={`inline-block mr-3 ${isKeyword ? 'text-[#e84b2a]' : 'text-white'}`}
               >
-                <span>Analyze My Resume</span>
-                <span className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#0e0e18]">
-                  <ArrowRight className="w-4 h-4 text-[#e84b2a] stroke-[3px]" />
-                </span>
+                {word}
               </motion.span>
-            </Link>
-          </div>
-        </div>
+            );
+          })}
+        </motion.h1>
 
-        {/* Right column (40%) - Curved oval mockup layout */}
-        <div className="lg:col-span-5 flex justify-center items-center relative h-[450px] lg:h-[480px]">
-          {/* Double Oval Frames with White Borders */}
-          <div className="relative w-full max-w-[360px] h-[340px] flex items-center justify-start">
-            
-            {/* Oval 1 - Vertical layout */}
-            <div className="w-[170px] h-[250px] rounded-[90px] border-4 border-white/20 overflow-hidden shadow-2xl relative z-10">
-              <img 
-                src="/team_working.png" 
-                alt="Team working illustration" 
-                className="w-full h-full object-cover select-none pointer-events-none"
-              />
-            </div>
+        <p className="text-sm font-light text-white/50 leading-relaxed max-w-lg mt-6">
+          Upload your resume, discover skill gaps, get a personalized roadmap, and ace your next interview — all powered by AI.
+        </p>
 
-            {/* Oval 2 - Slightly tilted/offset layout */}
-            <div className="w-[150px] h-[230px] rounded-[80px] border-4 border-white/20 overflow-hidden shadow-2xl absolute left-36 top-12 rotate-6 z-0">
-              <img 
-                src="/career_growth.png" 
-                alt="Career path growth illustration" 
-                className="w-full h-full object-cover select-none pointer-events-none"
-              />
-            </div>
-
-            {/* Abstract Organic Paint Splash Blob */}
-            <div 
-              className="absolute bottom-4 left-[140px] w-14 h-12 bg-gradient-to-br from-[#e84b2a] to-[#ff6b4a] opacity-90 blur-[1px] shadow-lg z-20"
-              style={{ borderRadius: '35% 65% 60% 40% / 50% 50% 50% 50%' }}
-            />
-
-            {/* Dotted Grid Overlay */}
-            <div className="absolute -right-4 top-8 w-20 h-20 bg-[radial-gradient(circle,_#e84b2a_1.5px,_transparent_1.5px)] [background-size:10px_10px] opacity-25 z-0" />
-            
-            {/* Circle Outline Accent */}
-            <div className="absolute -left-6 -bottom-6 w-24 h-24 rounded-full border border-white/10 z-0" />
-          </div>
-
-          {/* Floating ATS Score card overlay */}
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="absolute bottom-0 left-4 z-30 w-full max-w-[250px]"
-          >
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-              className="bg-gradient-to-b from-[#1A1259]/90 to-[#0e0e18]/90 border border-[#e84b2a]/20 backdrop-blur-[20px] rounded-[24px] p-5 shadow-[0_0_60px_rgba(232,75,42,0.15),0_25px_50px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center"
+        {/* CTA Button Row using pill-shaped orange buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 items-center pt-4 mb-8">
+          <Link href="/auth/register">
+            <motion.span
+              animate={{ scale: [1, 1.02, 1] }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              whileHover={{ scale: 1.03, boxShadow: '0 12px 40px rgba(232,75,42,0.5)' }}
+              whileTap={{ scale: 0.97 }}
+              style={{ boxShadow: '0 8px 32px rgba(232,75,42,0.3)' }}
+              className="inline-flex items-center gap-4 bg-[#e84b2a] hover:bg-[#e84b2a]/95 text-white pl-8 pr-2.5 py-3.5 rounded-full font-bold text-base transition-all duration-200 cursor-pointer shadow-lg shadow-[#e84b2a]/20"
             >
-              <ScoreRing score={87} size={110} dark={true} />
-              
-              <div className="mt-4 space-y-2 w-full">
-                {[
-                  "Strong keywords",
-                  "Good formatting"
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-xs text-white/80">
-                    <div className="w-4 h-4 rounded-full bg-[#1D9E75]/20 flex items-center justify-center text-[#1D9E75]">
-                      <CheckCircle className="w-3 h-3" />
-                    </div>
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
+              <span>Analyze My Resume</span>
+              <span className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#0e0e18]">
+                <ArrowRight className="w-4 h-4 text-[#e84b2a] stroke-[3px]" />
+              </span>
+            </motion.span>
+          </Link>
         </div>
+
+        {/* Floating ATS Score card overlay */}
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="w-full max-w-[250px]"
+        >
+          <motion.div
+            animate={{ y: [0, -6, 0] }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+            className="bg-gradient-to-b from-[#1A1259]/90 to-[#0e0e18]/90 border border-[#e84b2a]/20 backdrop-blur-[20px] rounded-[24px] p-5 shadow-[0_0_60px_rgba(232,75,42,0.15)] flex flex-col items-center justify-center"
+          >
+            <ScoreRing score={87} size={110} dark={true} />
+            
+            <div className="mt-4 space-y-2 w-full text-left">
+              {[
+                "Strong keywords",
+                "Good formatting"
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center gap-2 text-xs text-white/80">
+                  <div className="w-4 h-4 rounded-full bg-[#1D9E75]/20 flex items-center justify-center text-[#1D9E75]">
+                    <CheckCircle className="w-3 h-3" />
+                  </div>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

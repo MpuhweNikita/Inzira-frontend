@@ -52,10 +52,10 @@ export function Testimonials() {
         style={{ borderRadius: '50% 50% 30% 70% / 50% 60% 40% 60%' }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <div className="max-w-3xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
         
-        {/* Left Side: Testimonial details */}
-        <div className="lg:col-span-7 space-y-6 flex flex-col items-center lg:items-start text-center lg:text-left">
+        {/* Testimonial details */}
+        <div className="space-y-6 flex flex-col items-center w-full">
           <span className="text-xs font-bold text-[#e84b2a] tracking-[0.2em] uppercase">
             TESTIMONIALS
           </span>
@@ -65,7 +65,7 @@ export function Testimonials() {
             About <span className="text-[#e84b2a]">Inzira Careers</span>
           </h2>
 
-          <div className="relative min-h-[160px] w-full flex items-center justify-center lg:justify-start">
+          <div className="relative min-h-[160px] w-full flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeIndex}
@@ -73,12 +73,12 @@ export function Testimonials() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 10 }}
                 transition={{ duration: 0.3 }}
-                className="space-y-4"
+                className="space-y-4 flex flex-col items-center"
               >
                 <p className="italic text-[#0e0e18] text-base leading-relaxed max-w-xl">
                   &ldquo;{current.quote}&rdquo;
                 </p>
-                <div>
+                <div className="flex flex-col items-center">
                   <h4 className="font-extrabold text-[#0e0e18] text-sm">{current.name}</h4>
                   <p className="text-xs text-[#6b6b75] font-light">{current.role}</p>
                 </div>
@@ -93,7 +93,7 @@ export function Testimonials() {
             </AnimatePresence>
           </div>
 
-          <div className="flex items-center gap-4 pt-2">
+          <div className="flex items-center justify-center gap-4 pt-2">
             <button
               onClick={handleNext}
               className="inline-flex items-center gap-3 bg-[#e84b2a] hover:bg-[#e84b2a]/95 text-white pl-6 pr-2 py-2 rounded-full font-semibold transition-all duration-200 cursor-pointer text-sm shadow-md shadow-[#e84b2a]/20 border-none outline-none"
@@ -108,34 +108,6 @@ export function Testimonials() {
                 Join our community
               </span>
             </Link>
-          </div>
-        </div>
-
-        {/* Right Side: Portrait Image with Blobs */}
-        <div className="lg:col-span-5 flex justify-center items-center relative h-[360px] lg:h-[400px]">
-          <div className="relative">
-            {/* Outline Circle Ornament */}
-            <div className="absolute -left-6 -top-6 w-[280px] h-[280px] rounded-full border border-[#e84b2a]/10 z-0" />
-            
-            {/* Orange Blob */}
-            <div 
-              className="absolute -right-8 bottom-6 w-20 h-20 bg-gradient-to-br from-[#e84b2a] to-[#ff6b4a] opacity-80 blur-[1px] shadow-lg z-10"
-              style={{ borderRadius: '40% 60% 70% 30% / 50%' }}
-            />
-
-            {/* Oval Portrait Frame */}
-            <div className="w-[240px] h-[320px] rounded-[110px] border-4 border-[#0e0e18]/10 overflow-hidden shadow-2xl relative z-20">
-              <img 
-                src="/leader_portrait.png" 
-                alt="Tech leader portrait" 
-                className="w-full h-full object-cover select-none pointer-events-none"
-              />
-            </div>
-
-            {/* Decorative Quote Mark */}
-            <div className="absolute bottom-4 left-[-16px] w-12 h-12 rounded-full bg-[#e84b2a] text-white flex items-center justify-center font-serif text-3xl shadow-lg z-30 select-none pointer-events-none">
-              &ldquo;
-            </div>
           </div>
         </div>
       </div>
