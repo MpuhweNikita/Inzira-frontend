@@ -162,7 +162,7 @@ export function HowItWorks() {
       <div className="absolute left-0 right-0 bottom-0 overflow-hidden w-full leading-[0] pointer-events-none z-10">
         <svg viewBox="0 0 1440 160" className="relative block w-full h-[80px] md:h-[120px] lg:h-[160px]" preserveAspectRatio="none">
           <path 
-            d="M0,0 C100,0 180,140 280,140 L960,140 C1120,140 1280,0 1440,0 L1440,160 L0,160 Z" 
+            d="M0,140 C150,140 300,70 450,70 L1100,70 C1200,70 1340,0 1440,0 L1440,160 L0,160 Z" 
             fill="#0e0e18" 
           />
         </svg>
