@@ -6,9 +6,10 @@ interface ScoreRingProps {
   score: number;
   size?: number;
   dark?: boolean;
+  variant?: 'default' | 'landing';
 }
 
-export function ScoreRing({ score, size = 200, dark = false }: ScoreRingProps) {
+export function ScoreRing({ score, size = 200, dark = false, variant = 'default' }: ScoreRingProps) {
   const radius = size * 0.38;
   const circumference = 2 * Math.PI * radius;
   const [displayed, setDisplayed] = useState(0);
@@ -36,6 +37,49 @@ export function ScoreRing({ score, size = 200, dark = false }: ScoreRingProps) {
 
   const strokeDashoffset = circumference - (displayed / 100) * circumference;
   const color = score >= 80 ? '#1D9E75' : score >= 60 ? '#EF9F27' : '#E24B4A';
+
+  if (variant === 'landing') {
+    return (
+      <div className="relative flex items-center justify-center" style={{ width: size, height: size }}>
+        <svg className="transform -rotate-90" width={size} height={size}>
+          {/* Background track circle */}
+          <circle
+            cx={size / 2}
+            cy={size / 2}
+            r={radius}
+            stroke="rgba(83, 74, 183, 0.25)"
+            strokeWidth={size * 0.08}
+            fill="transparent"
+          />
+          {/* Animated value circle */}
+          <circle
+            cx={size / 2}
+            cy={size / 2}
+            r={radius}
+            style={{
+              stroke: '#ffffff',
+              strokeDasharray: circumference,
+              strokeDashoffset,
+              transition: 'stroke-dashoffset 0.1s ease-out',
+            }}
+            strokeWidth={size * 0.08}
+            strokeLinecap="round"
+            fill="transparent"
+          />
+        </svg>
+        
+        {/* Centered labels */}
+        <div className="absolute flex flex-col items-center justify-center text-center select-none pointer-events-none mt-1">
+          <span className="font-black text-[#0f0e1f] text-4xl leading-none tracking-tight">
+            {displayed}
+          </span>
+          <span className="uppercase tracking-widest font-extrabold mt-1 text-[#4b4870] text-[9px]">
+            ATS Match
+          </span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative flex items-center justify-center" style={{ width: size, height: size }}>

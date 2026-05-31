@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import { ScoreRing } from '../ui/ScoreRing';
 
 export function Hero() {
@@ -72,7 +72,7 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full">
         {/* Left Column: Welcoming words and CTA */}
-        <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
+        <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 lg:pl-20">
           {/* Indigo border badge */}
           <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#e84b2a]/30 bg-[#e84b2a]/5 text-xs font-bold tracking-wider text-[#e84b2a] uppercase">
             AI-Powered Career Platform
@@ -139,18 +139,23 @@ export function Hero() {
                 repeat: Infinity,
                 ease: 'easeInOut',
               }}
-              className="bg-gradient-to-b from-[#1A1259]/90 to-[#0e0e18]/90 border border-[#e84b2a]/20 backdrop-blur-[20px] rounded-[24px] p-6 shadow-[0_0_60px_rgba(232,75,42,0.15)] flex flex-col items-center justify-center"
+              className="bg-[#131129] border border-[#262445] rounded-[32px] p-6 shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex flex-col items-center justify-center"
             >
-              <ScoreRing score={87} size={120} dark={true} />
+              <div className="text-white/30 text-[10px] font-extrabold uppercase tracking-[0.2em] mb-4">
+                ATS Score
+              </div>
+
+              <ScoreRing score={87} size={120} dark={true} variant="landing" />
               
-              <div className="mt-5 space-y-2.5 w-full text-left">
+              <div className="mt-6 space-y-3 w-full text-left">
                 {[
                   "Strong keywords",
-                  "Good formatting"
+                  "Good formatting",
+                  "Relevant experience"
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-2.5 text-xs text-white/80">
-                    <div className="w-4.5 h-4.5 rounded-full bg-[#1D9E75]/20 flex items-center justify-center text-[#1D9E75]">
-                      <CheckCircle className="w-3.5 h-3.5 text-[#1D9E75]" />
+                  <div key={idx} className="flex items-center gap-3 text-xs text-white/80 font-medium">
+                    <div className="w-4.5 h-4.5 rounded-full bg-[#0a231c] flex items-center justify-center text-[#10b981] flex-shrink-0">
+                      <Check className="w-2.5 h-2.5 stroke-[3px]" />
                     </div>
                     <span>{item}</span>
                   </div>

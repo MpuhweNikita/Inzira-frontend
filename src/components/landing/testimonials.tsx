@@ -61,7 +61,7 @@ export function Testimonials() {
           </span>
           {/* Heading with Clash and keyword highlight */}
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#0e0e18] tracking-tight leading-tight">
-            What Say Our Developers, <br />
+            What  Developers are saying, <br />
             About <span className="text-[#e84b2a]">Inzira Careers</span>
           </h2>
 
