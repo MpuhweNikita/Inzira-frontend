@@ -1,13 +1,19 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Syne } from 'next/font/google';
 import { ToastProvider } from '@/components/ui/Toast';
 import { PageTransition } from '@/components/ui/PageTransition';
 import './globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600'],
   variable: '--font-inter',
+});
+
+const syne = Syne({
+  subsets: ['latin'],
+  weight: ['700', '800'],
+  variable: '--font-syne',
 });
 
 export const metadata: Metadata = {
@@ -21,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
-      <body className="bg-[#F4F3FF] text-[#1A1832] antialiased">
+    <html lang="en" className={`${inter.variable} ${syne.variable} font-sans`}>
+      <body className="bg-[#f5f5f5] text-[#0e0e18] antialiased">
         <ToastProvider>
           <PageTransition>
             {children}

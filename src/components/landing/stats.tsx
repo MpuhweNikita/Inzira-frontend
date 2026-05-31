@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useInView } from 'framer-motion';
 import { Award, FileText, CheckCircle2, Cpu } from 'lucide-react';
 
 interface StatItemProps {
@@ -39,16 +39,15 @@ function StatItem({ targetValue, suffix = '', label, icon: Icon }: StatItemProps
   }, [isInView, targetValue]);
 
   return (
-    <div ref={containerRef} className="flex flex-col items-center text-center p-4 w-full">
-      {/* Small indigo icon */}
-      <div className="text-[#7F77DD] mb-3">
-        <Icon className="w-7 h-7" />
+    <div ref={containerRef} className="flex flex-col items-center text-center p-4 w-full relative z-20">
+      <div className="text-[#e84b2a]/60 mb-3">
+        <Icon className="w-6 h-6" />
       </div>
-      <h3 className="text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[#7F77DD] to-[#534AB7] tracking-tight">
+      <h3 className="text-4xl font-extrabold text-white tracking-tight">
         {count.toLocaleString()}
-        {suffix}
+        <span className="text-[#e84b2a] ml-0.5">{suffix}</span>
       </h3>
-      <p className="text-sm text-white/50 uppercase tracking-wider mt-1.5 font-medium">
+      <p className="text-xs text-white/50 uppercase tracking-wider mt-1.5 font-light">
         {label}
       </p>
     </div>
@@ -57,15 +56,36 @@ function StatItem({ targetValue, suffix = '', label, icon: Icon }: StatItemProps
 
 export function Stats() {
   const statsData = [
-    { targetValue: 10000, suffix: "+", label: "Resumes Analyzed", icon: FileText },
+    { targetValue: 1000, suffix: "+", label: "Resumes Analyzed", icon: FileText },
     { targetValue: 94, suffix: "%", label: "Interview Success", icon: CheckCircle2 },
     { targetValue: 500, suffix: "+", label: "Career Paths", icon: Award },
     { targetValue: 100, suffix: "%", label: "Real-Time AI", icon: Cpu },
   ];
 
   return (
-    <section className="bg-gradient-to-r from-[#0D0C1D] via-[#120F2D] to-[#0D0C1D] py-10 relative z-10 border-y border-[#3C3489]/20">
-      <div className="max-w-7xl mx-auto px-6 flex flex-wrap md:flex-nowrap justify-between items-center gap-6">
+    <section className="bg-[#0e0e18] pt-10 pb-28 relative z-10 border-t border-white/5">
+      {/* Decorative Ornaments (Consistent across dark sections) */}
+      {/* ✕ Marks Stack */}
+      <div className="absolute left-8 top-12 flex flex-col gap-2 opacity-25 text-[#e84b2a] text-sm font-bold font-mono select-none pointer-events-none">
+        <span>✕</span>
+        <span>✕</span>
+        <span>✕</span>
+      </div>
+
+      {/* Triangles Cluster */}
+      <div className="absolute right-8 top-12 flex flex-col gap-2 opacity-25 text-[#e84b2a] text-xs font-bold select-none pointer-events-none">
+        <span>▲</span>
+        <span>▲</span>
+        <span>▲</span>
+      </div>
+
+      {/* Dot Grid */}
+      <div className="absolute bottom-16 left-12 w-12 h-12 bg-[radial-gradient(#e84b2a_2px,transparent_2px)] [background-size:12px_12px] opacity-20 select-none pointer-events-none" />
+
+      {/* Thin Horizontal Line Accent */}
+      <div className="absolute right-12 bottom-16 w-24 h-0.5 bg-[#e84b2a] opacity-35 select-none pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 flex flex-wrap md:flex-nowrap justify-between items-center gap-6 relative z-20">
         {statsData.map((stat, idx) => (
           <React.Fragment key={idx}>
             <div className="w-[45%] md:w-full flex justify-center">
@@ -81,6 +101,16 @@ export function Stats() {
             )}
           </React.Fragment>
         ))}
+      </div>
+
+      {/* Bottom Wave Divider: Sweeping asymmetric S-curve curve transitioning Dark -> Light #f5f5f5 */}
+      <div className="absolute left-0 right-0 bottom-0 overflow-hidden w-full leading-[0] pointer-events-none z-10">
+        <svg viewBox="0 0 1440 160" className="relative block w-full h-[80px] md:h-[120px] lg:h-[160px]" preserveAspectRatio="none">
+          <path 
+            d="M0,0 C100,0 180,140 280,140 L960,140 C1120,140 1280,0 1440,0 L1440,160 L0,160 Z" 
+            fill="#f5f5f5" 
+          />
+        </svg>
       </div>
     </section>
   );

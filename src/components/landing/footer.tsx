@@ -55,13 +55,13 @@ function LinkedinIcon({ className }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="bg-[#07060F] border-t border-white/5 py-16 text-[#6B6A8A] text-sm relative overflow-hidden">
+    <footer className="bg-[#07060f] border-t border-white/5 py-16 text-white/40 text-sm relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-10">
         
         {/* Brand column */}
         <div className="md:col-span-4 space-y-4">
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-gradient-to-br from-[#534AB7] to-[#D85A30] flex-shrink-0" />
+            <div className="w-2.5 h-2.5 rounded-full bg-[#e84b2a] flex-shrink-0" />
             <span className="font-extrabold text-lg text-white tracking-tight">
               Inzira
             </span>
