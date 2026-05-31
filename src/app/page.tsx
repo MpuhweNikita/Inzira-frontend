@@ -34,9 +34,8 @@ export default function Home() {
       {/* 6. Testimonials */}
       <Testimonials />
 
-      {/* 7. CTA Banner */}
       <section 
-        className="text-white py-24 relative overflow-hidden bg-[#0e0e18]"
+        className="text-white py-16 relative overflow-hidden bg-[#0e0e18]"
         style={{
           background: 'radial-gradient(ellipse 70% 80% at 50% 50%, rgba(232, 75, 42, 0.1) 0%, transparent 70%), #0e0e18'
         }}

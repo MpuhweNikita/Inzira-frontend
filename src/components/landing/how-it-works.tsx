@@ -55,7 +55,7 @@ export function HowItWorks() {
   };
 
   return (
-    <section id="how-it-works" className="py-24 pb-36 bg-[#f5f5f5] text-[#0e0e18] relative overflow-hidden">
+    <section id="how-it-works" className="py-16 pb-24 bg-[#f5f5f5] text-[#0e0e18] relative overflow-hidden">
       {/* Decorative Ornaments (Consistent across all sections) */}
       {/* 1. Dot Grid Pattern in corner */}
       <div className="absolute top-12 left-12 w-16 h-16 bg-[radial-gradient(#e84b2a_2px,transparent_2px)] [background-size:10px_10px] opacity-20 select-none pointer-events-none" />
@@ -144,7 +144,7 @@ export function HowItWorks() {
         </div>
       </div>
 
-      {/* Partner Logos Bar */}
+      {/* Partner Logos Bar
       <div className="max-w-7xl mx-auto px-6 mt-24 border-t border-[#0e0e18]/5 pt-12 text-center relative z-20">
         <p className="text-xs uppercase tracking-widest text-[#6b6b75] mb-8 font-semibold">
           Empowering developers at top global engineering teams
@@ -156,13 +156,13 @@ export function HowItWorks() {
           <span className="font-extrabold text-xl tracking-tight text-[#0e0e18]">NETFLIX</span>
           <span className="font-extrabold text-xl tracking-tight text-[#0e0e18]">STRIPE</span>
         </div>
-      </div>
+      </div> */}
 
       {/* Bottom Wave Divider: Sweeping asymmetric S-curve curve transitioning Light -> Dark #0e0e18 */}
       <div className="absolute left-0 right-0 bottom-0 overflow-hidden w-full leading-[0] pointer-events-none z-10">
-        <svg viewBox="0 0 1440 160" className="relative block w-full h-[80px] md:h-[120px] lg:h-[160px]" preserveAspectRatio="none">
+        <svg viewBox="0 0 1440 160" className="relative block w-full h-[40px] md:h-[60px] lg:h-[80px]" preserveAspectRatio="none">
           <path 
-            d="M0,140 C150,140 300,70 450,70 L1100,70 C1200,70 1340,0 1440,0 L1440,160 L0,160 Z" 
+            d="M0,140 C150,140 280,80 432,80 L1080,80 C1180,80 1320,40 1440,40 L1440,160 L0,160 Z" 
             fill="#0e0e18" 
           />
         </svg>
