@@ -114,9 +114,9 @@ export function Testimonials() {
 
       {/* Bottom Wave Divider: Sweeping asymmetric S-curve curve transitioning Light -> Dark #0e0e18 */}
       <div className="absolute left-0 right-0 bottom-0 overflow-hidden w-full leading-[0] pointer-events-none z-10">
-        <svg viewBox="0 0 1440 160" className="relative block w-full h-[80px] md:h-[120px] lg:h-[160px]" preserveAspectRatio="none">
+        <svg viewBox="0 0 1440 160" className="relative block w-full h-[40px] md:h-[60px] lg:h-[80px]" preserveAspectRatio="none">
           <path 
-            d="M0,140 C250,140 400,70 650,70 L850,70 C1050,70 1200,0 1440,0 L1440,160 L0,160 Z" 
+            d="M0,140 C150,140 280,80 432,80 L1080,80 C1180,80 1320,40 1440,40 L1440,160 L0,160 Z" 
             fill="#0e0e18" 
           />
         </svg>

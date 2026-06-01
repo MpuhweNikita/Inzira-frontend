@@ -75,7 +75,7 @@ export function HowItWorks() {
         <div className="lg:col-span-7 relative">
           
           {/* Intersecting large + crosshair */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+          <div className="absolute inset-0 hidden sm:flex items-center justify-center pointer-events-none z-0">
             <div className="w-[1.5px] h-full bg-[#e84b2a]/15" />
             <div className="h-[1.5px] w-full bg-[#e84b2a]/15 absolute" />
             <div className="w-10 h-10 rounded-full bg-[#f5f5f5] border-2 border-[#e84b2a]/30 flex items-center justify-center absolute text-[#e84b2a] font-bold text-xl select-none shadow-sm">
