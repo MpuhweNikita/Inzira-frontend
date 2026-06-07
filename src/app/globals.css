@@ -25,10 +25,12 @@
 @layer base {
   body { 
     font-family: var(--font-satoshi), sans-serif;
+    word-spacing: 0.06em;
     @apply bg-[#f5f5f5] text-[#4a4a5a] antialiased; 
   }
   h1,h2,h3,h4,h5,h6 {
     font-family: var(--font-clash), sans-serif;
-    @apply tracking-tight font-extrabold;
+    word-spacing: 0.08em;
+    @apply font-extrabold;
   }
 }
