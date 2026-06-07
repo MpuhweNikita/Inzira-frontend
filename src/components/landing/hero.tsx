@@ -80,7 +80,8 @@ export function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] tracking-tight text-white max-w-3xl"
+          className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.25] tracking-normal text-white max-w-3xl"
+          style={{ wordSpacing: '0.08em' }}
         >
           {words.map((word, idx) => {
             const cleanWord = word.replace(/[^a-zA-Z-]/g, '').toLowerCase();
@@ -97,7 +98,7 @@ export function Hero() {
           })}
         </motion.h1>
 
-        <p className="text-sm font-light text-white/50 leading-relaxed max-w-lg">
+        <p className="text-sm font-light text-white/50 leading-[1.8] max-w-lg" style={{ wordSpacing: '0.06em' }}>
           Upload your resume, discover skill gaps, get a personalized roadmap, and ace your next interview — all powered by AI.
         </p>
 
